@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI GPTChat</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#9975d4">
+    <meta name="msapplication-navbutton-color" content="#9975d4">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>    
+    <div id="wrapper">
+        <canvas id="canvas"></canvas>
+        <div id="header-bar">
+            <span class="gradient-text">Willkommen im Chat</span>
+            <div id="headerMenu-wrapper">
+                <button type="button" id="menu-toggle">⋮</button>
+                <div id="headerMenu" class="hidden">
+                    <div class="menu-arrow"></div>
+                    <div id="systemPromt">System-Promt</div>
+                    <div id="clearBtn">Chat löschen</div>
+                    <div id="modellInfo">Modell-Info</div>
+                    <div id="clearBtn">
+                        <div id="themeSelector">
+                            <label>
+                              <input type="radio" name="theme" value="theme-blue">
+                              <span class="dot blue"></span>
+                            </label>
+                            <label>
+                                <input type="radio" name="theme" value="theme-green">
+                                <span class="dot green"></span>
+                              </label>
+                              <label>
+                                <input type="radio" name="theme" value="theme-orange">
+                                <span class="dot orange"></span>
+                              </label>
+                            <label>
+                                <input type="radio" name="theme" value="theme-red">
+                                <span class="dot red"></span>
+                              </label>
+                          </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+
+        <div id="chatbox"></div>
+             
+        <!-- Eingabeformular -->
+        <div id="footer-bar">   
+            <textarea id="message" oninput="autoResize(this)" rows="1" placeholder="Nachricht eingeben..." required></textarea>     
+            <button type="button" id="sendBtn">
+                <svg id="send-icon" viewBox="0 0 24 24" width="20" height="20" fill="white" stroke="#888" stroke-width="1.5">
+                    <path d="M2 21l21-9L2 3v7l15 2-15 2v7z" />
+                </svg>
+            </button>            
+            <button type="button" id="stopBtn">
+                <svg id="stop-icon" viewBox="0 0 24 24" width="20" height="20" fill="#ccc" stroke="#888" stroke-width="1.5">
+                    <rect x="4" y="5" width="15" height="15" />
+                </svg>
+            </button>
+        </div>
+        <!-- Modal: API-Key -->
+        <div id="apikeyModal">
+            <div>
+                <img id="apikeyModal-image" src="icons/bot.png" alt="Logo" />
+                <textarea id="apikeyModal-textarea" rows="4" placeholder="API-Key eingeben..."></textarea>
+                <div>
+                    <button type="button" id="apikeyModal-cancel">Abbrechen</button>
+                    <button type="button" id="apikeyModal-save">Speichern</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal: System Prompt -->
+        <div id="systemPromptModal" class="modal">
+            <div>
+                <h3>System Prompt</h3>
+                <textarea id="systemPromptModal-textarea" rows="10"></textarea>
+                <div>
+                    <button type="button" id="systemPromptModal-cancel">Abbrechen</button>
+                    <button type="button" id="systemPromptModal-save">Speichern</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal: Chat löschen -->
+        <div id="deleteModal" class="modal">
+            <div>
+                <h3>Möchtest du den Chat löschen?</h3>
+                <div>
+                    <button type="button" id="deleteModal-cancel">Abbrechen</button>
+                    <button type="button" id="deleteModal-delete">Löschen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-markup.min.js"></script> 
+    <script src="script.js"></script>
+</body>
+</html>
