@@ -3,8 +3,8 @@ async function chat() {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "Authorization": `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`,
-      "OpenAI-Project": "proj_YNhLZIqfzXfBTxpsgK4rRSP1",
+      "Authorization": `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`,
+      "OpenAI-Project": "proj_pwfmAzhaxi8Sa4t1w1dbMLMj",
     },
     body: JSON.stringify({
       model: "gpt-4o-mini", // oder gpt-3.5-turbo, gpt-4o
