@@ -47,7 +47,7 @@ const models = [
         name: "OpenAI:<br>(GPT-4.1-mini)",
         route: "https://api.openai.com/v1/chat/completions",
         model: "gpt-5",
-        apiKey: 'null1234',
+        apiKey: "Xe4NT8cTdEIzg2L2pBRffNhM8Y_lcA49uUWZBf7OIhWtbmam2mF8RFIvu9Hqh3FOcC-vn4A",
     },
     {
         name: "OpenRouter:<br>(Gemma-3-27B) ",
