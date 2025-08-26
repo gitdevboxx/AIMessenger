@@ -47,7 +47,7 @@ const models = [
         name: "OpenAI:<br>(GPT-4.1-mini)",
         route: "https://api.openai.com/v1/chat/completions",
         model: "gpt-4.1-mini",
-        apiKey: "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",
+        apiKey: "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",
     },
     {
         name: "OpenRouter:<br>(Gemma-3-27B) ",
