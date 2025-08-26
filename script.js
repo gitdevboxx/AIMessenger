@@ -46,7 +46,7 @@ const models = [
     {
         name: "OpenAI:<br>(GPT-4.1-mini)",
         route: "https://api.openai.com/v1/chat/completions",
-        model: "gpt-4.1-mini",
+        model: "gpt-5",
         apiKey: null,
     },
     {
