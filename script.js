@@ -4,6 +4,7 @@ async function chat() {
     headers: {
       "Content-Type": "application/json",
       "Authorization": `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`,
+      "OpenAI-Project": "proj_YNhLZIqfzXfBTxpsgK4rRSP1",
     },
     body: JSON.stringify({
       model: "gpt-4o-mini", // oder gpt-3.5-turbo, gpt-4o
