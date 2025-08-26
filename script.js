@@ -46,8 +46,8 @@ const models = [
     {
         name: "OpenAI:<br>(GPT-4.1-mini)",
         route: "https://api.openai.com/v1/chat/completions",
-        model: "gpt-5",
-        apiKey: "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",
+        model: "gpt-4.1-mini",
+        apiKey: "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",
     },
     {
         name: "OpenRouter:<br>(Gemma-3-27B) ",
@@ -631,12 +631,11 @@ sendBtn.addEventListener("click", async () => {
         abortController = new AbortController();
 
         // Anfrage an das Modell senden
-        const res = await fetch("https://api.openai.com/v1/responses", {
+        const res = await fetch(selectedModel.route, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": `Bearer ${API_KEY}`,
-                
+                Authorization: `Bearer ${API_KEY}`,
             },
             body: JSON.stringify({
                 model: selectedModel.model,
